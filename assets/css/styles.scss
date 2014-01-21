@@ -53,6 +53,13 @@ table{
 	border-spacing: 0;
 }
 
+.easing{
+	-moz-transition: all 350ms ease;
+	-webkit-transition: all 350ms ease;
+	-o-transition: all 350ms ease;
+	transition: all 350ms ease;
+}
+
 .container{
 	max-width: 960px;
 	width: 100%;
@@ -80,6 +87,13 @@ table{
 	margin: 50px 0px 0px 0px;
 }
 
+.home-small-p{
+	font-size: 10pt;
+	color: #999;
+	text-align: center;
+	margin: 20px 0px 0px 0px;
+}
+
 .home-btn{
 	text-align: center;
 	margin: 50px 0px 0px 0px;
@@ -93,5 +107,67 @@ table{
 		padding: 20px;
 		font-weight: 900;
 		font-size: 20pt;
+		@extend .easing;
+		&:hover{
+			@extend .easing;
+			background-color: #ddd;
+		}
+	}
+}
+
+.key{
+	text-align: center;
+	margin: 50px 0px 0px 0px;
+
+	li{
+		display: inline-block;
+		text-align: center;
+		padding: 10px;
+		font-size: 15pt;
+		font-weight: bold;
+		color: #fff;
+		margin: 0px 5px 0px 5px;
+	}
+}
+
+.dev{
+	border-left: 5px solid #479cc0;
+}
+
+.design{
+	border-left: 5px solid #47c04a;
+}
+
+.business{
+	border-left: 5px solid #c04747;
+}
+
+.job-posting{
+	background-color: #fff;
+	padding: 50px 0px 50px 0px;
+	@extend .easing;
+	&:hover{
+		@extend .easing;
+		background-color: #ddd;
+	}
+}
+
+.job-title,
+.job-date,
+.job-company,
+.job-location,
+.job-salary{
+	line-height: 2;
+}
+
+.job-title{
+
+	a{
+		color: #111;
+		font-size: 20pt;
+		text-decoration: none;
+		font-weight: 900;
+		padding: 0px 0px 20px 0px;
+		border-bottom: 2px solid #ccc;
 	}
 }
