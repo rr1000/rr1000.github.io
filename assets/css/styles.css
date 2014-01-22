@@ -50,7 +50,7 @@ table {
 .job-post-inner .job-date a:hover,
 .job-post-inner .job-company a:hover,
 .job-post-inner .job-location a:hover,
-.job-post-inner .job-salary a:hover {
+.job-post-inner .job-salary a:hover, .subscribe input[type="submit"], .subscribe input[type="submit"]:hover, footer a, footer a:hover {
   -moz-transition: all 350ms ease;
   -webkit-transition: all 350ms ease;
   -o-transition: all 350ms ease;
@@ -69,7 +69,7 @@ table {
 
 .container {
   max-width: 1280px;
-  min-width: 960px;
+  width: 100%;
   margin: auto; }
 
 .splash {
@@ -137,9 +137,6 @@ table {
   .job-posting:hover {
     background-color: #ddd; }
 
-.job-posting:last-child {
-  border-bottom: 0px; }
-
 .job-post-inner {
   width: 100%; }
   .job-post-inner .job-title,
@@ -177,14 +174,53 @@ table {
     color: #c04747; }
 
 .subscribe {
-  background-color: #111;
   padding: 50px 0px 50px 0px; }
+  .subscribe form {
+    text-align: center;
+    margin: 50px 0px 0px 0px; }
+  .subscribe input[type="text"] {
+    padding: 10px;
+    background-color: #111;
+    border: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: 900; }
+  .subscribe input[type="submit"] {
+    margin: 30px 0px 0px 0px;
+    border: 2px solid #111;
+    padding: 10px;
+    font-size: 20pt;
+    color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    background-color: #fff; }
+    .subscribe input[type="submit"]:hover {
+      background-color: #ddd;
+      cursor: pointer; }
+  .subscribe input[type="text"]:focus {
+    background-color: #fff; }
 
 .sub-h1 {
   font-size: 20pt;
-  color: #fff;
+  color: #111;
   text-align: center;
   font-weight: bold; }
+
+footer {
+  padding: 50px 0px 50px 0px;
+  border-top: 2px solid #ccc; }
+  footer p {
+    text-align: center;
+    font-size: 15pt;
+    color: #111;
+    line-height: 2;
+    font-weight: bold; }
+  footer a {
+    color: #111;
+    text-decoration: none; }
+    footer a:hover {
+      color: #999; }
 
 @media all and (max-width: 1090px) {
   .job-post-inner .job-title,
@@ -196,3 +232,18 @@ table {
     font-size: 12pt; }
   .job-post-inner .job-title {
     width: 20%; } }
+@media all and (max-width: 768px) {
+  .splash {
+    padding: 50px 30px 50px 30px; }
+
+  .job-post-inner .job-title,
+  .job-post-inner .job-date,
+  .job-post-inner .job-company,
+  .job-post-inner .job-location,
+  .job-post-inner .job-salary {
+    width: 100%;
+    float: none;
+    padding: 10px;
+    border-right: 2px solid #ccc;
+    font-size: 20pt;
+    text-align: center; } }

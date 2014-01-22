@@ -76,7 +76,7 @@ table{
 
 .container{
 	max-width: 1280px;
-	min-width: 960px;
+	width: 100%;
 	margin: auto;
 }
 
@@ -165,10 +165,6 @@ table{
 	}
 }
 
-.job-posting:last-child{
-	border-bottom: 0px;
-}
-
 .job-post-inner{
 	width: 100%;
 
@@ -215,15 +211,73 @@ table{
 }
 
 .subscribe{
-	background-color: #111;
 	padding: 50px 0px 50px 0px;
+
+	form{
+		text-align: center;
+		margin: 50px 0px 0px 0px;
+	}
+
+	input[type="text"]{
+		padding: 10px;
+		background-color: #111;
+		border: 0px;
+		font-family: $sans;
+		font-size: 20pt;
+		text-align: center;
+		font-weight: 900;
+	}
+
+	input[type="submit"]{
+		margin: 30px 0px 0px 0px;
+		border: 2px solid #111;
+		padding: 10px;
+		font-size: 20pt;
+		color: #111;
+		font-family: $sans;
+		font-weight: 900;
+		background-color: #fff;
+		@extend .easing;
+		&:hover{
+			background-color: #ddd;
+			cursor: pointer;
+			@extend .easing;
+		}
+	}
+
+	input[type="text"]:focus{
+		background-color: #fff;
+	}
 }
 
 .sub-h1{
 	font-size: 20pt;
-	color: #fff;
+	color: #111;
 	text-align: center;
 	font-weight: bold;
+}
+
+footer{
+	padding: 50px 0px 50px 0px;
+	border-top: 2px solid #ccc;
+
+	p{
+		text-align: center;
+		font-size: 15pt;
+		color: #111;
+		line-height: 2;
+		font-weight: bold;
+	}
+
+	a{
+		color: #111;
+		text-decoration: none;
+		@extend .easing;
+		&:hover{
+			@extend .easing;
+			color: #999;
+		}
+	}
 }
 
 @media all and (max-width: 1090px){
@@ -241,6 +295,29 @@ table{
 
 		.job-title{
 			width: 20%;
+		}
+	}
+
+}
+
+@media all and (max-width: 768px){
+	.splash{
+		padding: 50px 30px 50px 30px;
+	}
+
+	.job-post-inner{
+
+		.job-title,
+		.job-date,
+		.job-company,
+		.job-location,
+		.job-salary{
+			width: 100%;
+			float: none;
+			padding: 10px;
+			border-right: 2px solid #ccc;
+			font-size: 20pt;
+			text-align: center;
 		}
 	}
 
