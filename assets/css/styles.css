@@ -42,15 +42,34 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.easing, .home-btn a, .home-btn a:hover, .job-posting, .job-posting:hover {
+.easing, .home-btn a, .home-btn a:hover, .job-posting, .job-posting:hover, .job-post-inner .job-title a,
+.job-post-inner .job-date a,
+.job-post-inner .job-company a,
+.job-post-inner .job-location a,
+.job-post-inner .job-salary a, .job-post-inner .job-title a:hover,
+.job-post-inner .job-date a:hover,
+.job-post-inner .job-company a:hover,
+.job-post-inner .job-location a:hover,
+.job-post-inner .job-salary a:hover {
   -moz-transition: all 350ms ease;
   -webkit-transition: all 350ms ease;
   -o-transition: all 350ms ease;
   transition: all 350ms ease; }
 
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
 .container {
-  max-width: 960px;
-  width: 100%;
+  max-width: 1280px;
+  min-width: 960px;
   margin: auto; }
 
 .splash {
@@ -61,8 +80,7 @@ table {
   text-align: center;
   color: #fff;
   font-weight: 900;
-  font-size: 45pt;
-  margin: 50px 0px 0px 0px; }
+  font-size: 45pt; }
 
 .home-p {
   text-align: center;
@@ -115,21 +133,66 @@ table {
 
 .job-posting {
   background-color: #fff;
-  padding: 50px 0px 50px 0px; }
+  border-bottom: 2px solid #ccc; }
   .job-posting:hover {
     background-color: #ddd; }
 
-.job-title,
-.job-date,
-.job-company,
-.job-location,
-.job-salary {
-  line-height: 2; }
+.job-posting:last-child {
+  border-bottom: 0px; }
 
-.job-title a {
-  color: #111;
+.job-post-inner {
+  width: 100%; }
+  .job-post-inner .job-title,
+  .job-post-inner .job-date,
+  .job-post-inner .job-company,
+  .job-post-inner .job-location,
+  .job-post-inner .job-salary {
+    width: 18%;
+    float: left;
+    padding: 40px 10px 40px 10px;
+    border-right: 2px solid #ccc;
+    font-size: 15pt;
+    font-weight: 900;
+    color: #999; }
+    .job-post-inner .job-title a,
+    .job-post-inner .job-date a,
+    .job-post-inner .job-company a,
+    .job-post-inner .job-location a,
+    .job-post-inner .job-salary a {
+      color: #111;
+      text-decoration: none; }
+      .job-post-inner .job-title a:hover,
+      .job-post-inner .job-date a:hover,
+      .job-post-inner .job-company a:hover,
+      .job-post-inner .job-location a:hover,
+      .job-post-inner .job-salary a:hover {
+        color: #999; }
+  .job-post-inner .job-salary {
+    border: 0px; }
+  .job-post-inner .dev-blue {
+    color: #479cc0; }
+  .job-post-inner .design-green {
+    color: #47c04a; }
+  .job-post-inner .business-red {
+    color: #c04747; }
+
+.subscribe {
+  background-color: #111;
+  padding: 50px 0px 50px 0px; }
+
+.sub-h1 {
   font-size: 20pt;
-  text-decoration: none;
-  font-weight: 900;
-  padding: 0px 0px 20px 0px;
-  border-bottom: 2px solid #ccc; }
+  color: #fff;
+  text-align: center;
+  font-weight: bold; }
+
+@media all and (max-width: 1090px) {
+  .job-post-inner .job-title,
+  .job-post-inner .job-date,
+  .job-post-inner .job-company,
+  .job-post-inner .job-location,
+  .job-post-inner .job-salary {
+    width: 16%;
+    font-size: 12pt; }
+  .job-post-inner .job-title {
+    width: 20%; } }

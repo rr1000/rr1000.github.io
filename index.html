@@ -30,27 +30,34 @@
 			{{#each jobPost}}
 				<div class="job-posting {{jobType}}">
 					<div class="container">
-						<h2 class="job-title">
-							<a href="{{jobLink}}">
-								{{jobName}}
-							</a>
-						</h2>
-						<div class="job-company">
-							{{jobCompany}}
-						</div>
-						<div class="job-date">
-							{{jobDate}}
-						</div>
-						<div class="job-location">
-							{{jobLocation}}
-						</div>
-						<div class="job-salary">
-							{{jobSalary}}
+						<div class="job-post-inner cf">
+							<h2 class="job-title">
+								<a href="{{jobLink}}">
+									{{jobName}}
+								</a>
+							</h2>
+							<div class="job-company {{jobColor}}">
+								{{jobCompany}}
+							</div>
+							<div class="job-date">
+								{{jobDate}}
+							</div>
+							<div class="job-location">
+								{{jobLocation}}
+							</div>
+							<div class="job-salary">
+								{{jobSalary}}
+							</div>
 						</div>
 					</div>
 				</div>
 			{{/each}}
 		</script>
+		<section class="subscribe">
+			<div class="container">
+				<h1 class="sub-h1">Subscribe to our weekly newsletter filled with new jobs</h1>
+			</div>
+		</section>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
 	</body>
